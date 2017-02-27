@@ -1,0 +1,1 @@
+-DHAVE_SWAPCONTEXT -DWITH_QTENV -DWITH_TKENV -DWITH_MPI -DHAVE_PCAP -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -g -Wall   -Wno-deprecated-register -fno-stack-protector   -I/usr/include/cryptopp -I.. -I. -I/home/daniel/omnetpp-5.0/include

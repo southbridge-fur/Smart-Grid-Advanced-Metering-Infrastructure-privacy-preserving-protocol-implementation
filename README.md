@@ -25,4 +25,4 @@ Available [here](https://www.researchgate.net/publication/305077004_Secure_and_e
 **Notes**	
 Currently, the project is in an inoperable state, as many changes have been made recently in order to prepare for simulation with [OMNet++](https://omnetpp.org/).
 
-**Update:** Project has been refactored.
+**Update:** Old files have been cleared out to make room for the new implementation.

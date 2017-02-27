@@ -1,0 +1,24 @@
+file 4263244 1488134441                                         
+version 2
+run General-0-20170226-12:18:11-17388
+attr configname General
+attr datetime 20170226-12:18:11
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network AMI
+attr processid 17388
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 0  AMI.sms[0]  arrivals  ETV
+attr interpolationmode  none
+vector 1  AMI.sms[1]  arrivals  ETV
+attr interpolationmode  none
+0	491 2131376 55 1207294 9.257 101568.257 101560 1 1 101560 101560
+1	2131867 2131377 56 1207295 9.257 101568.257 101560 1 1 101560 101560
