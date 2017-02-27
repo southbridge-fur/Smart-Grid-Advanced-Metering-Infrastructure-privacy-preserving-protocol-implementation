@@ -1,6 +1,0 @@
-[General]
-network = AMI
-cpu-time-limit = 600s
-parallel-simulation = false
-record-eventlog = false
-#debug-on-errors = true
