@@ -1,0 +1,3 @@
+ok so
+SmartMeter and Utility company both have a variety of functions to do things with
+Their adapters cover the bridge between the omnet++ version and the implementation type
