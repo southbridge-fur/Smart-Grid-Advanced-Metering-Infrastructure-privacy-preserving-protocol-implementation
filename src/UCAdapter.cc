@@ -156,7 +156,7 @@ bool UCAdapter::sessionKeyExchangeFromSM(omnetpp::cMessage *msg)
 
 bool UCAdapter::energyConsumptionProcessing(omnetpp::cMessage *msg)
 {
-    omnetpp::cQueue* dataQueue = omnetpp::check_and_cast<omnetpp::cQueue*> (msg->getObject("dataToUC"));
+    omnetpp::cQueue* dataQueue = omnetpp::check_and_cast<omnetpp::cQueue*> (msg->removeObject("dataToUC"));
 
     omnetpp::cQueue* outputQueue = new omnetpp::cQueue("queue");
 
@@ -166,8 +166,9 @@ bool UCAdapter::energyConsumptionProcessing(omnetpp::cMessage *msg)
 	if (sessionKeyExchangeFromSM(message)) outputQueue->insert(message);
 	//else delete message;
     }
+    
+    delete dataQueue;
 
-    msg->removeObject("dataToUC");
     msg->addObject(outputQueue);
     
     return !outputQueue->isEmpty();

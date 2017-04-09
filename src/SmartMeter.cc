@@ -31,6 +31,18 @@ void SmartMeter::initialize()
     //EV << "Packet Size id: " << packetSizeSignal << endl;
 }
 
+void SmartMeter::addSimTime(double time)
+{
+    curDelay = simTime()+time;
+    /*
+    simtime_t_cref st = sim->getSimTime();
+    EV << "Simtime before adding: " << simTime() << endl;
+    sim->setSimTime(SimTime(st.raw()+(time*st.getScale()))); //advances simtime forward
+    EV << "Simtime after adding:  " << simTime() << endl;
+    */
+    
+}
+    
 void SmartMeter::log(simsignal_t id, double value) //simsignal_t is just type def'ed as an int
 {
     emit(id,value);
@@ -161,6 +173,16 @@ void SmartMeter::timedHandleMessage(cMessage *msg)
         sendEnergyConsumption(msg); //puts a message in the queue
 	sendQueueDataToCollector(); //dequeues that message and starts attempting to send it
     }
+    else if (!strcmp(msg->getName(), "delayedMessage"))
+    {
+	send(check_and_cast<cMessage*>(msg->getParList().remove(0)),"radio$o");
+	delete msg;
+    }
+    else if (!strcmp(msg->getName(), "delayedEnqueue"))
+    {
+	energyDataQueue->insert(check_and_cast<cMessage*>(msg->getParList().remove(0)));
+	delete msg;
+    }
     else // unknown message
     {
         EV << "Message " << msg->getName() << " received" << endl;
@@ -202,8 +224,11 @@ void SmartMeter::sendEnergyConsumption(cMessage *msg)
     // Add message to the energy data queue
     cMessage* out = sm->sendEnergyConsumption(msg);
 
-    energyDataQueue->insert(out);
+    delete msg;
     
+    cMessage* delayed = new cMessage("delayedEnqueue");
+    delayed->addObject(out);
+    scheduleAt(curDelay,delayed);
     //send(out,"radio$o");
 }
 

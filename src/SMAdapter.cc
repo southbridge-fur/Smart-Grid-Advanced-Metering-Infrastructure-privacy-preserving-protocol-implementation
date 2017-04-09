@@ -28,6 +28,11 @@ SMAdapter::~SMAdapter()
     delete sm;
 }
 
+void SMAdapter::addSimTime(double time)
+{
+    dynamic_cast<smart3p::SmartMeter*>(out)->addSimTime(time);
+}
+
 void SMAdapter::log(char* tag, double value)
 {
     dynamic_cast<smart3p::SmartMeter*>(out)->log(tag,value);
@@ -123,7 +128,7 @@ omnetpp::cQueue* SMAdapter::startSessionKeyExchange(omnetpp::cMessage *msg)
 	p->addObject(new ::cInteger("timeStamp", &hmac.timeStamp));
 	p->addObject(new ::cInteger("r", &hmac.r));
 
-	if (verbose)
+	if (false)
 	{
 	    int totalBytes =0;
 	    omnetpp::cArray items = p->getParList();

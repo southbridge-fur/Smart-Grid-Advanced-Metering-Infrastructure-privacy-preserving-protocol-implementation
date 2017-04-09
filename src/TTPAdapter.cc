@@ -52,7 +52,7 @@ omnetpp::cQueue* TTPAdapter::startSessionKeyExchange()
 
 omnetpp::cMessage* TTPAdapter::finishSessionKeyExchange(omnetpp::cMessage* msg)
 {    
-    smart3p::SMPacket* p = omnetpp::check_and_cast<smart3p::SMPacket*> (msg->getObject("packet"));
+    smart3p::SMPacket* p = omnetpp::check_and_cast<smart3p::SMPacket*> (msg->removeObject("packet"));
     
     CryptoPP::Integer req = *dynamic_cast<CryptoPP::Integer*>(p->getObject("r"));
     CryptoPP::Integer id = *dynamic_cast<CryptoPP::Integer*>(p->getObject("id")); //SM id (anon id)

@@ -96,15 +96,16 @@ void TrustedThirdParty::finishSessionKeyExchange(cMessage *msg)
 {
     // Generate the session key
     cMessage* out = ttp->finishSessionKeyExchange(msg);
+
+    delete msg;
+    
     if (out == NULL)
     {
 	EV << "Have not finished session key exchange yet" << endl;
 	return;
     }
-    
+
     send(out, "ucLine$o");
-    
-    delete msg;
 }
 
 void TrustedThirdParty::registerInfoFromUC(cMessage *msg)

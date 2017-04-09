@@ -18,11 +18,13 @@ class SmartMeter : public Unit
 {
   private:
     // state
+    simtime_t curDelay;
+    
     simtime_t lastArrival;
     long int smID;
     cQueue *energyDataQueue;
     cMessage *startSendingEnergyData;
-
+    
     // statistics
     simsignal_t stackSizeSignal;
     simsignal_t sessionKeyDecryptionTimeSignal;
@@ -53,6 +55,7 @@ public:
     //emit
     void log(simsignal_t id, double value); //simsignal_t is just type def'ed as an int
     void log(char* tag, double value);
+    void addSimTime(double); //sets the delay to add to sim time for next scheduled event
 };
 
 }; // namespace

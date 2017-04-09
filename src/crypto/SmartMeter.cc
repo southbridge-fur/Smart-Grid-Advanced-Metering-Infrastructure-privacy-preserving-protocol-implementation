@@ -117,8 +117,10 @@ Packet* SmartMeter::sendDataToTTP(Integer data) //message here is the data which
     payload.r = R;
     payload.messageLength = subMessage.ByteCount();
     payload.hmac = generateHMAC(hmacKey,payload);
-	
-    out->log("dataEncryptionTime",std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count());
+
+    double time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count();
+    out->log("dataEncryptionTime", time);
+    out->addSimTime(time);
 
     Packet* packet = new Packet;
     packet->pl = payload;
@@ -202,7 +204,10 @@ Packet* SmartMeter::sessionKeyExchange(char* m, Integer l, Integer trustedPartyI
 
 	payload.messageLength = length;
 
-	out->log("sessionKeyEncryptionTime",std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count());
+	double time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count();
+	out->log("sessionKeyEncryptionTime",time);
+	out->addSimTime(time);
+	//DEBUG("Time Added",new Integer((int) (time*100000.0)));
 	
 	Packet packet;
 	packet.dest = trustedPartyId;
@@ -248,7 +253,9 @@ bool SmartMeter::recieveHMAC(Integer c1, Integer c2, Integer ttpId)
 //    DEBUG("c1",&c1);
 //    DEBUG("hTwo",&hTwo);
 
-    out->log("sessionKeyDecryptionTime",std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count());
+    double time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - start).count();
+    out->log("sessionKeyDecryptionTime",time);
+    out->addSimTime(time);
     
     //c1 should equal hTwo if not then fail
     if (c1.Compare(hTwo) == 0)

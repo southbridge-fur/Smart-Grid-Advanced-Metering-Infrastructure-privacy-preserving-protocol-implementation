@@ -146,36 +146,11 @@ void UtilityCompany::energyConsumptionProcessing(cMessage *msg)
     if (!uc->energyConsumptionProcessing(msg))
     {
 	EV << "HMAC Verification failed!" << endl;
+	delete msg;
 	return;
     }
 
     send(msg, "ttpLine$o"); //msg contains a queue name "queue" which holds all the verified data
-/*
-    cQueue *dataFromCollector = check_and_cast<cQueue*> (msg->getObject("dataToUC"));
-    cQueue *dataToTTP = new cQueue("incoming");
-
-    while (!dataFromCollector->isEmpty())
-    {
-        dataToTTP->insert(dataFromCollector->pop());
-    }
-    data->add(dataToTTP);
-
-    msg->removeObject(dataFromCollector);
-    delete msg;
-    delete dataFromCollector;
-
-    if (simTime() >= prevTime + par("sendInterval").doubleValue())
-    {
-        cMessage *job = new cMessage("UCtoTTP");
-        cArray *copyData = data->dup();
-
-        job->addObject(copyData);
-        send(job, "ttpLine$o");
-        prevTime = simTime();
-        data->clear();
-    }
-*/
-
 }
     
 void UtilityCompany::registerSMWithTTP(cMessage *msg)

@@ -32,6 +32,7 @@ public:
     omnetpp::cMessage* sendEnergyConsumption(omnetpp::cMessage *msg);
 
     void log(char*,double);
+    void addSimTime(double);
 };
 
 #endif
