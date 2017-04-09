@@ -22,7 +22,4 @@ Available [here](https://www.researchgate.net/publication/305077004_Secure_and_e
 **Depends**
 [Crypto++](http://cryptopp.com/) version 5.0.0 or greater.
 
-**Notes**	
-Currently, the project is in an inoperable state, as many changes have been made recently in order to prepare for simulation with [OMNet++](https://omnetpp.org/).
-
-**Update:** Old files have been cleared out to make room for the new implementation.
+[OMNet++](https://omnetpp.org/) version 5.0 or greater.
