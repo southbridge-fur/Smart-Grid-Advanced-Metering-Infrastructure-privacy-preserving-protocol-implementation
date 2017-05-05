@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -r /home/daniel/omnetpp-5.0/samples/Smart3P/simulations /home/daniel/Smart-Grid-Advanced-Metering-Infrastructure-privacy-preserving-protocol-implementation/
+cp -r /home/daniel/omnetpp-5.0/samples/Smart3P/src /home/daniel/Smart-Grid-Advanced-Metering-Infrastructure-privacy-preserving-protocol-implementation/
+git 
