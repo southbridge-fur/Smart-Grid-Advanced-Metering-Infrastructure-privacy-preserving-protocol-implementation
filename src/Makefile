@@ -42,20 +42,10 @@ OBJS = \
     $O/Unit.o \
     $O/Collector.o \
     $O/SMAdapter.o \
-    $O/KeyPacket_m.o \
-    $O/HMACPayloadPacket_m.o \
-    $O/KPPacket_m.o \
-    $O/PayloadPacket_m.o \
-    $O/MKPacket_m.o \
     $O/SMPacket_m.o
 
 # Message files
 MSGFILES = \
-    KeyPacket.msg \
-    HMACPayloadPacket.msg \
-    KPPacket.msg \
-    PayloadPacket.msg \
-    MKPacket.msg \
     SMPacket.msg
 
 # SM files
@@ -162,11 +152,6 @@ depend:
 # DO NOT DELETE THIS LINE -- make depend depends on it.
 $O/Adapter.o: Adapter.cc \
 	Adapter.h \
-	HMACPayloadPacket_m.h \
-	KPPacket_m.h \
-	KeyPacket_m.h \
-	MKPacket_m.h \
-	PayloadPacket_m.h \
 	Unit.h \
 	cInteger.h \
 	crypto/examples.h \
@@ -178,19 +163,8 @@ $O/Collector.o: Collector.cc \
 $O/DataGenerator.o: DataGenerator.cc \
 	DataGenerator.h \
 	SMPacket_m.h
-$O/HMACPayloadPacket_m.o: HMACPayloadPacket_m.cc \
-	HMACPayloadPacket_m.h
-$O/KPPacket_m.o: KPPacket_m.cc \
-	KPPacket_m.h
-$O/KeyPacket_m.o: KeyPacket_m.cc \
-	KeyPacket_m.h
-$O/MKPacket_m.o: MKPacket_m.cc \
-	MKPacket_m.h
-$O/PayloadPacket_m.o: PayloadPacket_m.cc \
-	PayloadPacket_m.h
 $O/SMAdapter.o: SMAdapter.cc \
 	Adapter.h \
-	MKPacket_m.h \
 	SMAdapter.h \
 	SMPacket_m.h \
 	SmartMeter.h \
@@ -204,7 +178,6 @@ $O/SMPacket_m.o: SMPacket_m.cc \
 	SMPacket_m.h
 $O/SmartMeter.o: SmartMeter.cc \
 	Adapter.h \
-	MKPacket_m.h \
 	SMAdapter.h \
 	SMPacket_m.h \
 	SmartMeter.h \
