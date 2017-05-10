@@ -66,9 +66,10 @@ public:
     const char* getName() const;
     /*!
       Sets the name of the instance.
+      \param c const char string to change the name to.
       \sa getName()
     */
-    void setName(const char*);
+    void setName(const char* c);
 
     //! Duplicate
     /*!

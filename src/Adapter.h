@@ -25,6 +25,7 @@ namespace smart3p
   Abstract Adapter class to convert between types used in the Protocol Implementation and the Simulation.
   Most of the protocol functionality shouldn't occur here, as this is just a method to convert between types as well as pack/unpack packets and messages.
   This is designed to be extended and used by specific Adapters for each pair of classes to be "bridged".
+  \sa SMAdapter, UCAdapter and TTPAdapter
  */
 class Adapter
 {

@@ -17,7 +17,8 @@ void DataGenerator::initialize()
     readyList = new bool[gateSize("smLine")]; //keeps track of which smart meters are ready
     
     timer = new cMessage("timer");
-    //smCounter = 0;
+        
+    dataFile=par("dataFileName");
     
     cMessage *job = new cMessage("startTheJob");
     scheduleAt(simTime(), job);
@@ -25,8 +26,7 @@ void DataGenerator::initialize()
 
 bool DataGenerator::readData()
 {
-    //std::ifstream file("/home/daniel/omnetpp-5.0/samples/Smart3P/src/data.csv");
-    std::ifstream file("/home/daniel/data.csv");
+    std::ifstream file(dataFile);
     int counter = 0;
     int key = -1; // Smart meter ID
     char c; // Separator
