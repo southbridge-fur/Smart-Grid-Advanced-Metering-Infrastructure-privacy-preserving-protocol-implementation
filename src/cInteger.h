@@ -27,21 +27,21 @@ public:
     //! Constructor
     /*!
       Value is dependant upon the default behavour for CryptoPP::Integer when instantiated without a value. 
-      \params n Instance name.
+      \param n Instance name.
       \sa cInteger(cInteger*), cInteger(const char*, CryptoPP::Integer*) and cInteger(const char* n, int i)
      */
     cInteger(const char* n);
     //! Constructor
     /*!
-      \params n Instance name.
-      \params i copies provided CryptoPP::Integer.
+      \param n Instance name.
+      \param i copies provided CryptoPP::Integer.
       \sa cInteger(const char* n), cInteger(cInteger*), and cInteger(const char* n, int i)
      */
     cInteger(const char* n, CryptoPP::Integer* i);
     //! Constructor
     /*!
-      \params n Instance name.
-      \params i Value
+      \param n Instance name.
+      \param i Value
       \sa cInteger(const char* n), cInteger(cInteger*), and cInteger(const char*, CryptoPP::Integer*)
      */
     cInteger(const char* n, int i);
