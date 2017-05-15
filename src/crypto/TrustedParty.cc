@@ -41,6 +41,11 @@ void TrustedParty::registerSM(int id)
     SMList->add(list,id);
 }
 
+char* getMessage()
+{
+    return message;
+}
+    
 void TrustedParty::addDataToSM(int id, Integer* data)
 {
     List<Integer>* l = SMList->get(id);
@@ -230,7 +235,7 @@ bool TrustedParty::recieveHMAC(Integer length, Integer c1, Integer c2, Integer s
 	if (length <= mes->ByteCount())
 	{
 	    DEBUG("Session key",mes);
-	    sessionKey = r; //temporary setup for session key
+	    sessionKey = mes; 
 	    return true;
 	}
 	//DEBUG("length",&length);

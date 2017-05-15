@@ -9,13 +9,20 @@ namespace smart3p {
 
 using namespace omnetpp;
 
-/**
- * Generates messages; see NED file for more info.
- */
+//! Collector for smart3p::SmartMeter
+/*!
+  Collects messages smart3p::SmartMeter and forwards them to the smart3p::UtilityCompany.
+*/
 class Collector : public Unit
 {
   private:
+    /*!
+      Previous time a message was sent.
+     */
     simtime_t prevTime;
+    /*!
+      Queue of data to send to smart3p::UtilityCompany.
+     */
     cQueue dataQueue;
   public:
     Collector();

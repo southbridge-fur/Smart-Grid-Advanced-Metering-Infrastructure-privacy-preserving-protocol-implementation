@@ -4,6 +4,7 @@
 #include <cstdlib>
 
 template <class T>
+//! Nodes for the List class
 class ListNode
 {
 private:
@@ -18,6 +19,10 @@ public:
 };
 
 template <class T>
+//! General List Iterator
+/*!
+  Iterator iterates through array of ListNode. Order decided by order given.
+*/
 class Iterator
 {
 private:
@@ -34,6 +39,10 @@ public:
 };
 
 template <class T>
+//! Generic List implementation
+/*! 
+  Simple List implementation, does not sort elements. All searches are O(n).
+*/
 class List
 {
 private:
@@ -45,14 +54,20 @@ private:
 public:
     List();
     ~List();
-    
+
+    /*!
+      Appends element to the list.
+    */
     bool add(T*,int);
     void remove(int);
     int size();
     bool isEmpty();
     T* get(int);
     T* getRandom();
-    
+
+    /*!
+      Iterator iterates through array of ListNode
+    */
     Iterator<T>* iterator();
 };
 

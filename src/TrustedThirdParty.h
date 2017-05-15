@@ -24,24 +24,52 @@ namespace smart3p {
 
 using namespace omnetpp;
 
-/**
- * TODO - Generated class
- */
+//! Trusted Thrid Party for the simulation.
 class TrustedThirdParty : public Unit
 {
   private:
+    //! Adpater pointer
     TTPAdapter* ttp;
 
+    /*!
+      Registers smart3p::SmartMeter with the Trusted third party, passing the msg on to the Adapter
+      \sa TTPAdapter::registerSM(cMessage *msg)
+     */
     void registerSM(cMessage *msg);
+
+    /*!
+      Registers this Trusted Thrid Party with the Utiity Company
+    */
     void registerAtUC(cMessage *msg);
+
+    /*!
+      Processes (decrypts and verifies) the data coming from the Smart Meter.
+     */
     void processDataFromSM(cMessage *msg);
+
+    /*! 
+      Register key data coming from the Utility Company.
+    */
     void registerInfoFromUC(cMessage *msg);
+
+    /*! 
+      Initiates the Session Key Exchange Phase
+    */
     void startSessionKeyExchange();
+
+    /*! 
+      Called when recieving the session key from Smart Meter
+    */
     void finishSessionKeyExchange(cMessage *msg);
+    
   protected:
     virtual void initialize();
+
+    //! Default message handler
     virtual void timedHandleMessage(cMessage *msg);
+
 public:
+    //! Print debug messages
     void print(char*);
 };
 
