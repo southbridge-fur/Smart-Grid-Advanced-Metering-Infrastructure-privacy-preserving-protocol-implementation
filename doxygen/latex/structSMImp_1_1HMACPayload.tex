@@ -1,0 +1,141 @@
+\hypertarget{structSMImp_1_1HMACPayload}{}\section{S\+M\+Imp\+:\+:H\+M\+A\+C\+Payload Struct Reference}
+\label{structSMImp_1_1HMACPayload}\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+
+
+H\+M\+AC signed payload with encrypted elements.  
+
+
+
+
+{\ttfamily \#include $<$examples.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_a43ba32c0eb4fd4bd21de24aed393a0ae}{message\+Length}
+\begin{DoxyCompactList}\small\item\em Total length of the message. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_a9c5590cfd65a39f500552ea95b583241}{hmac}
+\begin{DoxyCompactList}\small\item\em Generated H\+M\+AC for verification. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_aa28e06eeacc346a1add298357a8b7fb9}{c1}
+\begin{DoxyCompactList}\small\item\em Part 1 of the encrypted message. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_aeb2e7ef7dfeda975882a42aab9c0652f}{c2}
+\begin{DoxyCompactList}\small\item\em Part 2 of the encrypted message. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_ab79ad3d823f9477a652bfd9b92f3c15b}{id}
+\begin{DoxyCompactList}\small\item\em ID of the originating \hyperlink{classSMImp_1_1Requester}{Requester}. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_abf2b3077546fcf168ee7e0fe80a08b40}{time\+Stamp}
+\begin{DoxyCompactList}\small\item\em Timestamp. \end{DoxyCompactList}\item 
+Integer \hyperlink{structSMImp_1_1HMACPayload_a6829ee16dbd13177fdbca12b6e52a75b}{r}
+\begin{DoxyCompactList}\small\item\em Shared secret, often unused. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+H\+M\+AC signed payload with encrypted elements. 
+
+Definition at line 81 of file examples.\+h.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_aa28e06eeacc346a1add298357a8b7fb9}\label{structSMImp_1_1HMACPayload_aa28e06eeacc346a1add298357a8b7fb9}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!c1@{c1}}
+\index{c1@{c1}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{c1}{c1}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::c1}
+
+
+
+Part 1 of the encrypted message. 
+
+
+
+Definition at line 91 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_aeb2e7ef7dfeda975882a42aab9c0652f}\label{structSMImp_1_1HMACPayload_aeb2e7ef7dfeda975882a42aab9c0652f}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!c2@{c2}}
+\index{c2@{c2}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{c2}{c2}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::c2}
+
+
+
+Part 2 of the encrypted message. 
+
+
+
+Definition at line 93 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_a9c5590cfd65a39f500552ea95b583241}\label{structSMImp_1_1HMACPayload_a9c5590cfd65a39f500552ea95b583241}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!hmac@{hmac}}
+\index{hmac@{hmac}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{hmac}{hmac}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::hmac}
+
+
+
+Generated H\+M\+AC for verification. 
+
+
+
+Definition at line 89 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_ab79ad3d823f9477a652bfd9b92f3c15b}\label{structSMImp_1_1HMACPayload_ab79ad3d823f9477a652bfd9b92f3c15b}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!id@{id}}
+\index{id@{id}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::id}
+
+
+
+ID of the originating \hyperlink{classSMImp_1_1Requester}{Requester}. 
+
+
+
+Definition at line 95 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_a43ba32c0eb4fd4bd21de24aed393a0ae}\label{structSMImp_1_1HMACPayload_a43ba32c0eb4fd4bd21de24aed393a0ae}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!message\+Length@{message\+Length}}
+\index{message\+Length@{message\+Length}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{message\+Length}{messageLength}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::message\+Length}
+
+
+
+Total length of the message. 
+
+Since fragmentation is possible, it\textquotesingle{}s important to know the totaly length of the overall message being sent. 
+
+Definition at line 87 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_a6829ee16dbd13177fdbca12b6e52a75b}\label{structSMImp_1_1HMACPayload_a6829ee16dbd13177fdbca12b6e52a75b}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!r@{r}}
+\index{r@{r}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::r}
+
+
+
+Shared secret, often unused. 
+
+
+
+Definition at line 99 of file examples.\+h.
+
+\mbox{\Hypertarget{structSMImp_1_1HMACPayload_abf2b3077546fcf168ee7e0fe80a08b40}\label{structSMImp_1_1HMACPayload_abf2b3077546fcf168ee7e0fe80a08b40}} 
+\index{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}!time\+Stamp@{time\+Stamp}}
+\index{time\+Stamp@{time\+Stamp}!S\+M\+Imp\+::\+H\+M\+A\+C\+Payload@{S\+M\+Imp\+::\+H\+M\+A\+C\+Payload}}
+\subsubsection{\texorpdfstring{time\+Stamp}{timeStamp}}
+{\footnotesize\ttfamily Integer S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::time\+Stamp}
+
+
+
+Timestamp. 
+
+
+
+Definition at line 97 of file examples.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/crypto/\hyperlink{examples_8h}{examples.\+h}\end{DoxyCompactItemize}

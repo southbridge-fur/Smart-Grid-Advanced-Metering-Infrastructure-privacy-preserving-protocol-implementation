@@ -1,0 +1,267 @@
+\hypertarget{classAdapter}{}\section{Adapter Class Reference}
+\label{classAdapter}\index{Adapter@{Adapter}}
+
+
+\hyperlink{classAdapter}{Adapter} Class.  
+
+
+
+
+{\ttfamily \#include $<$Adapter.\+h$>$}
+
+Inheritance diagram for Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAdapter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAdapter_a8c1799a1bd84d52fc7cbd8ebd07734eb}{Adapter} (\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} $\ast$o=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classAdapter_a08a07acff57eb40aba27455de23ed13c}{$\sim$\+Adapter} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}{print} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em Simulation string output. \end{DoxyCompactList}\item 
+void \hyperlink{classAdapter_a411c5677216438c68fc06f29909bf124}{print} (char $\ast$, Crypto\+P\+P\+::\+Integer $\ast$)
+\begin{DoxyCompactList}\small\item\em Simulation Crypto\+P\+P\+::\+Integer output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char $\ast$ \hyperlink{classAdapter_ae68c18841f3a26166d58e5771726a90e}{itob} (Crypto\+P\+P\+::\+Integer i)
+\begin{DoxyCompactList}\small\item\em Utility function to convert from Crypto\+P\+P\+::\+Integer to unsigned char array. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{classAdapter_a670343c730c9d4b08cc98b5b58a65988}{itob\+Const} (Crypto\+P\+P\+::\+Integer i)
+\begin{DoxyCompactList}\small\item\em Const variation of \hyperlink{classAdapter_ae68c18841f3a26166d58e5771726a90e}{itob(\+Crypto\+P\+P\+::\+Integer i)}. \end{DoxyCompactList}\item 
+static Crypto\+P\+P\+::\+Integer \hyperlink{classAdapter_ac816b07d03c876f535286cd757a0995b}{btoi} (unsigned char $\ast$b, int length)
+\begin{DoxyCompactList}\small\item\em Utility function to convert from unsigned character array to Crypto\+P\+P\+::\+Integer. \end{DoxyCompactList}\item 
+static Crypto\+P\+P\+::\+Integer \hyperlink{classAdapter_aafe53d6cbf771b802c76236c05df1616}{btoi} (const char $\ast$b, int length)
+\begin{DoxyCompactList}\small\item\em Const variation of \hyperlink{classAdapter_ac816b07d03c876f535286cd757a0995b}{btoi(unsigned char$\ast$ b, int length)}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classAdapter_a49cad2fc1742424ec9f28caaa30f489f}{verbose}
+\begin{DoxyCompactList}\small\item\em Verbose flag. \end{DoxyCompactList}\item 
+\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} $\ast$ \hyperlink{classAdapter_abdeff6c9fdf71ac88a56318fa7aea4c4}{out}
+\begin{DoxyCompactList}\small\item\em Simulation \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAdapter}{Adapter} Class. 
+
+Abstract \hyperlink{classAdapter}{Adapter} class to convert between types used in the Protocol Implementation and the Simulation. Most of the protocol functionality shouldn\textquotesingle{}t occur here, as this is just a method to convert between types as well as pack/unpack packets and messages. This is designed to be extended and used by specific Adapters for each pair of classes to be \char`\"{}bridged\char`\"{}. \begin{DoxySeeAlso}{See also}
+\hyperlink{classSMAdapter}{S\+M\+Adapter}, \hyperlink{classUCAdapter}{U\+C\+Adapter} and \hyperlink{classTTPAdapter}{T\+T\+P\+Adapter} 
+\end{DoxySeeAlso}
+
+
+Definition at line 30 of file Adapter.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAdapter_a8c1799a1bd84d52fc7cbd8ebd07734eb}\label{classAdapter_a8c1799a1bd84d52fc7cbd8ebd07734eb}} 
+\index{Adapter@{Adapter}!Adapter@{Adapter}}
+\index{Adapter@{Adapter}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{Adapter()}{Adapter()}}
+{\footnotesize\ttfamily Adapter\+::\+Adapter (\begin{DoxyParamCaption}\item[{\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} $\ast$}]{o = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for the \hyperlink{classAdapter}{Adapter}. 
+\begin{DoxyParams}{Parameters}
+{\em o} & Sets the output \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} class. Sets the verbose flag to true if not N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Adapter.\+cc.
+
+
+
+References out, and verbose.
+
+\mbox{\Hypertarget{classAdapter_a08a07acff57eb40aba27455de23ed13c}\label{classAdapter_a08a07acff57eb40aba27455de23ed13c}} 
+\index{Adapter@{Adapter}!````~Adapter@{$\sim$\+Adapter}}
+\index{````~Adapter@{$\sim$\+Adapter}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{$\sim$\+Adapter()}{~Adapter()}}
+{\footnotesize\ttfamily Adapter\+::$\sim$\+Adapter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line 21 of file Adapter.\+cc.
+
+
+
+References out.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAdapter_ac816b07d03c876f535286cd757a0995b}\label{classAdapter_ac816b07d03c876f535286cd757a0995b}} 
+\index{Adapter@{Adapter}!btoi@{btoi}}
+\index{btoi@{btoi}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{btoi()}{btoi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Crypto\+P\+P\+::\+Integer Adapter\+::btoi (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{b,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Utility function to convert from unsigned character array to Crypto\+P\+P\+::\+Integer. 
+
+Converts from unsigned character array to Crypto\+P\+P\+::\+Integer. 
+\begin{DoxyParams}{Parameters}
+{\em b} & unsigned char array. \\
+\hline
+{\em length} & Total length of the array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns new instance of Crypto\+P\+P\+::\+Integer. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter_ae68c18841f3a26166d58e5771726a90e}{itob(\+Crypto\+P\+P\+::\+Integer i)} and \hyperlink{classAdapter_aafe53d6cbf771b802c76236c05df1616}{btoi(const char$\ast$ b, int length)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 105 of file Adapter.\+h.
+
+\mbox{\Hypertarget{classAdapter_aafe53d6cbf771b802c76236c05df1616}\label{classAdapter_aafe53d6cbf771b802c76236c05df1616}} 
+\index{Adapter@{Adapter}!btoi@{btoi}}
+\index{btoi@{btoi}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{btoi()}{btoi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Crypto\+P\+P\+::\+Integer Adapter\+::btoi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{b,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Const variation of \hyperlink{classAdapter_ac816b07d03c876f535286cd757a0995b}{btoi(unsigned char$\ast$ b, int length)}. 
+
+
+
+Definition at line 113 of file Adapter.\+h.
+
+\mbox{\Hypertarget{classAdapter_ae68c18841f3a26166d58e5771726a90e}\label{classAdapter_ae68c18841f3a26166d58e5771726a90e}} 
+\index{Adapter@{Adapter}!itob@{itob}}
+\index{itob@{itob}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{itob()}{itob()}}
+{\footnotesize\ttfamily static unsigned char$\ast$ Adapter\+::itob (\begin{DoxyParamCaption}\item[{Crypto\+P\+P\+::\+Integer}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Utility function to convert from Crypto\+P\+P\+::\+Integer to unsigned char array. 
+
+Converts Crypto\+P\+P\+::\+Integer to unsigned char array. Use Crypto\+P\+P\+::\+Integer.\+Byte\+Count() to get the size of the array. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Crypto\+P\+P\+::\+Integer to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns unsigned char array. Use Crypto\+P\+P\+::\+Integer.\+Byte\+Count() to get the size of the array. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter_ac816b07d03c876f535286cd757a0995b}{btoi(unsigned char$\ast$ b, int length)} and \hyperlink{classAdapter_a670343c730c9d4b08cc98b5b58a65988}{itob\+Const(\+Crypto\+P\+P\+::\+Integer i)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 81 of file Adapter.\+h.
+
+\mbox{\Hypertarget{classAdapter_a670343c730c9d4b08cc98b5b58a65988}\label{classAdapter_a670343c730c9d4b08cc98b5b58a65988}} 
+\index{Adapter@{Adapter}!itob\+Const@{itob\+Const}}
+\index{itob\+Const@{itob\+Const}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{itob\+Const()}{itobConst()}}
+{\footnotesize\ttfamily static const char$\ast$ Adapter\+::itob\+Const (\begin{DoxyParamCaption}\item[{Crypto\+P\+P\+::\+Integer}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Const variation of \hyperlink{classAdapter_ae68c18841f3a26166d58e5771726a90e}{itob(\+Crypto\+P\+P\+::\+Integer i)}. 
+
+
+
+Definition at line 89 of file Adapter.\+h.
+
+\mbox{\Hypertarget{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}\label{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}} 
+\index{Adapter@{Adapter}!print@{print}}
+\index{print@{print}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Adapter\+::print (\begin{DoxyParamCaption}\item[{char $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Simulation string output. 
+
+Prints the char string to the simulation output. Intended for debugging. \begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter}{Adapter}(\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit}$\ast$ o = N\+U\+LL), \hyperlink{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}{print(char$\ast$)} and \hyperlink{classAdapter_a411c5677216438c68fc06f29909bf124}{print(char$\ast$, Crypto\+P\+P\+::\+Integer$\ast$)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 26 of file Adapter.\+cc.
+
+
+
+References D\+E\+B\+UG.
+
+\mbox{\Hypertarget{classAdapter_a411c5677216438c68fc06f29909bf124}\label{classAdapter_a411c5677216438c68fc06f29909bf124}} 
+\index{Adapter@{Adapter}!print@{print}}
+\index{print@{print}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Adapter\+::print (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{Crypto\+P\+P\+::\+Integer $\ast$}]{i }\end{DoxyParamCaption})}
+
+
+
+Simulation Crypto\+P\+P\+::\+Integer output. 
+
+Prints the provided Crypto\+P\+P\+::\+Integer to the simulation output as hex. Prepending the provided char string. Intended usage\+: print(\char`\"{}\+A large number\+: \char`\"{}, new Crypto\+P\+P\+::\+Integer(1234566789)); \begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter}{Adapter}(\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit}$\ast$ o = N\+U\+LL), \hyperlink{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}{print(char$\ast$)} and \hyperlink{classAdapter_a411c5677216438c68fc06f29909bf124}{print(char$\ast$, Crypto\+P\+P\+::\+Integer$\ast$)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 31 of file Adapter.\+cc.
+
+
+
+References D\+E\+B\+UG.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{classAdapter_abdeff6c9fdf71ac88a56318fa7aea4c4}\label{classAdapter_abdeff6c9fdf71ac88a56318fa7aea4c4}} 
+\index{Adapter@{Adapter}!out@{out}}
+\index{out@{out}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit}$\ast$ Adapter\+::out\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Simulation \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} Class. 
+
+This is a pointer to the Simulation-\/level abstract \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} class which provides debug output. Deprecated\+: Currently is also used as the output for emitting data thereby making its inclusion required. \begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter}{Adapter}(\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit}$\ast$ o = N\+U\+LL), \hyperlink{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}{print(char$\ast$)} and \hyperlink{classAdapter_a411c5677216438c68fc06f29909bf124}{print(char$\ast$, Crypto\+P\+P\+::\+Integer$\ast$)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 45 of file Adapter.\+h.
+
+\mbox{\Hypertarget{classAdapter_a49cad2fc1742424ec9f28caaa30f489f}\label{classAdapter_a49cad2fc1742424ec9f28caaa30f489f}} 
+\index{Adapter@{Adapter}!verbose@{verbose}}
+\index{verbose@{verbose}!Adapter@{Adapter}}
+\subsubsection{\texorpdfstring{verbose}{verbose}}
+{\footnotesize\ttfamily bool Adapter\+::verbose\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Verbose flag. 
+
+A flag to offer some control over debug and other verbose output. 
+
+Definition at line 37 of file Adapter.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Adapter_8h}{Adapter.\+h}\item 
+src/\hyperlink{Adapter_8cc}{Adapter.\+cc}\end{DoxyCompactItemize}

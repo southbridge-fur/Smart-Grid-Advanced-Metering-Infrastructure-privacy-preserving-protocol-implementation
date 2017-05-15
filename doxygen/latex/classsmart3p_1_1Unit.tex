@@ -1,0 +1,185 @@
+\hypertarget{classsmart3p_1_1Unit}{}\section{smart3p\+:\+:Unit Class Reference}
+\label{classsmart3p_1_1Unit}\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+
+
+Abstract class for the simulation.  
+
+
+
+
+{\ttfamily \#include $<$Unit.\+h$>$}
+
+Inheritance diagram for smart3p\+:\+:Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.456140cm]{classsmart3p_1_1Unit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmart3p_1_1Unit_ac650bc01f4016ce66b056a9a37793697}{Unit} ()
+\begin{DoxyCompactList}\small\item\em Default constrcutor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsmart3p_1_1Unit_af5ab11eebd455ae312399fa3ba813e1b}{$\sim$\+Unit} ()
+\item 
+void \hyperlink{classsmart3p_1_1Unit_a832d0c6a67960a6d7911df721eda7527}{print} (char $\ast$s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classsmart3p_1_1Unit_a93f16f43dec69d23d8588f3b60c96d69}{timed\+Handle\+Message} (c\+Message $\ast$msg)
+\item 
+void \hyperlink{classsmart3p_1_1Unit_a7763e2e6ec9e31c7a4743bf674351c13}{handle\+Message} (c\+Message $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Main message handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+c\+Message $\ast$ \hyperlink{classsmart3p_1_1Unit_a48c180587dfed5ccd985f52f4fab6001}{timeout\+Event}
+\item 
+double \hyperlink{classsmart3p_1_1Unit_a227ec26ef4734fb25d0e697ff3952e8a}{wait\+For\+Delivery}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for the simulation. 
+
+An abstract class designed to be extended by the nodes within the simulation. 
+
+Definition at line 29 of file Unit.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmart3p_1_1Unit_ac650bc01f4016ce66b056a9a37793697}\label{classsmart3p_1_1Unit_ac650bc01f4016ce66b056a9a37793697}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!Unit@{Unit}}
+\index{Unit@{Unit}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{Unit()}{Unit()}}
+{\footnotesize\ttfamily smart3p\+::\+Unit\+::\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constrcutor. 
+
+
+
+Definition at line 20 of file Unit.\+cc.
+
+
+
+References timeout\+Event, and wait\+For\+Delivery.
+
+\mbox{\Hypertarget{classsmart3p_1_1Unit_af5ab11eebd455ae312399fa3ba813e1b}\label{classsmart3p_1_1Unit_af5ab11eebd455ae312399fa3ba813e1b}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!````~Unit@{$\sim$\+Unit}}
+\index{````~Unit@{$\sim$\+Unit}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{$\sim$\+Unit()}{~Unit()}}
+{\footnotesize\ttfamily smart3p\+::\+Unit\+::$\sim$\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 27 of file Unit.\+cc.
+
+
+
+References timeout\+Event.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmart3p_1_1Unit_a7763e2e6ec9e31c7a4743bf674351c13}\label{classsmart3p_1_1Unit_a7763e2e6ec9e31c7a4743bf674351c13}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!handle\+Message@{handle\+Message}}
+\index{handle\+Message@{handle\+Message}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{handle\+Message()}{handleMessage()}}
+{\footnotesize\ttfamily void smart3p\+::\+Unit\+::handle\+Message (\begin{DoxyParamCaption}\item[{c\+Message $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Main message handler. 
+
+Main message handler. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Input message to be handled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+smart3\+P\+::\+Smart\+Meter\+::handle\+Message(c\+Message $\ast$msg), smart3\+P\+::\+Utility\+Company\+::handle\+Message(c\+Message $\ast$msg), smart3\+P\+::\+Trusted\+Third\+Party\+::handle\+Message(c\+Message $\ast$msg) and smart3\+P\+::\+Collector\+::handle\+Message(c\+Message $\ast$msg) 
+\end{DoxySeeAlso}
+
+
+Definition at line 39 of file Unit.\+cc.
+
+
+
+References timed\+Handle\+Message().
+
+\mbox{\Hypertarget{classsmart3p_1_1Unit_a832d0c6a67960a6d7911df721eda7527}\label{classsmart3p_1_1Unit_a832d0c6a67960a6d7911df721eda7527}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!print@{print}}
+\index{print@{print}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void smart3p\+::\+Unit\+::print (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+Used by \hyperlink{classAdapter}{Adapter} classes to print messages to the simulation screen. 
+\begin{DoxyParams}{Parameters}
+{\em s} & String to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classAdapter_af928c4508bc6a76e8f9b918d38ffd221}{Adapter\+::print(char$\ast$)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 34 of file Unit.\+cc.
+
+\mbox{\Hypertarget{classsmart3p_1_1Unit_a93f16f43dec69d23d8588f3b60c96d69}\label{classsmart3p_1_1Unit_a93f16f43dec69d23d8588f3b60c96d69}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!timed\+Handle\+Message@{timed\+Handle\+Message}}
+\index{timed\+Handle\+Message@{timed\+Handle\+Message}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{timed\+Handle\+Message()}{timedHandleMessage()}}
+{\footnotesize\ttfamily void smart3p\+::\+Unit\+::timed\+Handle\+Message (\begin{DoxyParamCaption}\item[{c\+Message $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Unused, simply prints te message name. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Input message to be handled. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classsmart3p_1_1UtilityCompany_af5ce80d9f1d293c9be21fa65668c0e74}{smart3p\+::\+Utility\+Company}, \hyperlink{classsmart3p_1_1SmartMeter_a3491294618643d423e8fd3578eb3a439}{smart3p\+::\+Smart\+Meter}, \hyperlink{classsmart3p_1_1TrustedThirdParty_adedb95022442b9c7f2bc1de5f4c17a76}{smart3p\+::\+Trusted\+Third\+Party}, and \hyperlink{classsmart3p_1_1Collector_a1b82f1a10a2579c3ed25bc899220b906}{smart3p\+::\+Collector}.
+
+
+
+Definition at line 50 of file Unit.\+cc.
+
+
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{classsmart3p_1_1Unit_a48c180587dfed5ccd985f52f4fab6001}\label{classsmart3p_1_1Unit_a48c180587dfed5ccd985f52f4fab6001}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!timeout\+Event@{timeout\+Event}}
+\index{timeout\+Event@{timeout\+Event}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{timeout\+Event}{timeoutEvent}}
+{\footnotesize\ttfamily c\+Message$\ast$ smart3p\+::\+Unit\+::timeout\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+c\+Message used to signal a timeout event. \begin{DoxySeeAlso}{See also}
+\hyperlink{classsmart3p_1_1Unit_a227ec26ef4734fb25d0e697ff3952e8a}{wait\+For\+Delivery} 
+\end{DoxySeeAlso}
+
+
+Definition at line 48 of file Unit.\+h.
+
+\mbox{\Hypertarget{classsmart3p_1_1Unit_a227ec26ef4734fb25d0e697ff3952e8a}\label{classsmart3p_1_1Unit_a227ec26ef4734fb25d0e697ff3952e8a}} 
+\index{smart3p\+::\+Unit@{smart3p\+::\+Unit}!wait\+For\+Delivery@{wait\+For\+Delivery}}
+\index{wait\+For\+Delivery@{wait\+For\+Delivery}!smart3p\+::\+Unit@{smart3p\+::\+Unit}}
+\subsubsection{\texorpdfstring{wait\+For\+Delivery}{waitForDelivery}}
+{\footnotesize\ttfamily double smart3p\+::\+Unit\+::wait\+For\+Delivery\hspace{0.3cm}{\ttfamily [protected]}}
+
+Amount of time to wait for the delivery of an outgoing message. \begin{DoxySeeAlso}{See also}
+\hyperlink{classsmart3p_1_1Unit_a48c180587dfed5ccd985f52f4fab6001}{timeout\+Event} 
+\end{DoxySeeAlso}
+
+
+Definition at line 53 of file Unit.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Unit_8h}{Unit.\+h}\item 
+src/\hyperlink{Unit_8cc}{Unit.\+cc}\end{DoxyCompactItemize}

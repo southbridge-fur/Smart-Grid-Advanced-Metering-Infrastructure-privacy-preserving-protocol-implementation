@@ -1,0 +1,187 @@
+\hypertarget{classTTPAdapter}{}\section{T\+T\+P\+Adapter Class Reference}
+\label{classTTPAdapter}\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+
+
+Trusted Thrid Party \hyperlink{classAdapter}{Adapter}.  
+
+
+
+
+{\ttfamily \#include $<$T\+T\+P\+Adapter.\+h$>$}
+
+Inheritance diagram for T\+T\+P\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTTPAdapter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTTPAdapter_a47fcddf78f8e0b494fe2f6a79f16c762}{T\+T\+P\+Adapter} (int id)
+\item 
+\hyperlink{classTTPAdapter_a2c64e6c544cf9aa5e715ecb91bae2baa}{T\+T\+P\+Adapter} (int id, \hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} $\ast$u)
+\item 
+\hyperlink{classTTPAdapter_aac9a02ae55c0ba9752869e5c7f1a3d79}{$\sim$\+T\+T\+P\+Adapter} ()
+\item 
+void \hyperlink{classTTPAdapter_ad53a31939a278d3c114f79bea64f81f0}{register\+SM} (omnetpp\+::c\+Message $\ast$)
+\item 
+omnetpp\+::c\+Queue $\ast$ \hyperlink{classTTPAdapter_a1e5405c3ac74693b2a542dd72ad44012}{start\+Session\+Key\+Exchange} ()
+\item 
+omnetpp\+::c\+Message $\ast$ \hyperlink{classTTPAdapter_a3cfb4c68f5a6bf562584f7710b411e4a}{finish\+Session\+Key\+Exchange} (omnetpp\+::c\+Message $\ast$)
+\item 
+void \hyperlink{classTTPAdapter_a9aa8948a5224e2cf567eaacb2dcee6ab}{register\+Info\+From\+UC} (omnetpp\+::c\+Message $\ast$)
+\item 
+omnetpp\+::c\+Message $\ast$ \hyperlink{classTTPAdapter_a4eba454018be25436474c37ae1bbe083}{register\+At\+UC} ()
+\item 
+void \hyperlink{classTTPAdapter_ab69604de63c3f769a10ec33168611274}{process\+Data\+From\+SM} (omnetpp\+::c\+Message $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Trusted Thrid Party \hyperlink{classAdapter}{Adapter}. 
+
+Definition at line 11 of file T\+T\+P\+Adapter.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTTPAdapter_a47fcddf78f8e0b494fe2f6a79f16c762}\label{classTTPAdapter_a47fcddf78f8e0b494fe2f6a79f16c762}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{T\+T\+P\+Adapter()}{TTPAdapter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+T\+P\+Adapter\+::\+T\+T\+P\+Adapter (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Trusted Third Party ID \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file T\+T\+P\+Adapter.\+cc.
+
+\mbox{\Hypertarget{classTTPAdapter_a2c64e6c544cf9aa5e715ecb91bae2baa}\label{classTTPAdapter_a2c64e6c544cf9aa5e715ecb91bae2baa}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{T\+T\+P\+Adapter()}{TTPAdapter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+T\+P\+Adapter\+::\+T\+T\+P\+Adapter (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\hyperlink{classsmart3p_1_1Unit}{smart3p\+::\+Unit} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Trusted Third Party ID \\
+\hline
+{\em u} & Output unit class (used for debugging) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file T\+T\+P\+Adapter.\+cc.
+
+\mbox{\Hypertarget{classTTPAdapter_aac9a02ae55c0ba9752869e5c7f1a3d79}\label{classTTPAdapter_aac9a02ae55c0ba9752869e5c7f1a3d79}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!````~T\+T\+P\+Adapter@{$\sim$\+T\+T\+P\+Adapter}}
+\index{````~T\+T\+P\+Adapter@{$\sim$\+T\+T\+P\+Adapter}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{$\sim$\+T\+T\+P\+Adapter()}{~TTPAdapter()}}
+{\footnotesize\ttfamily T\+T\+P\+Adapter\+::$\sim$\+T\+T\+P\+Adapter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTTPAdapter_a3cfb4c68f5a6bf562584f7710b411e4a}\label{classTTPAdapter_a3cfb4c68f5a6bf562584f7710b411e4a}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!finish\+Session\+Key\+Exchange@{finish\+Session\+Key\+Exchange}}
+\index{finish\+Session\+Key\+Exchange@{finish\+Session\+Key\+Exchange}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{finish\+Session\+Key\+Exchange()}{finishSessionKeyExchange()}}
+{\footnotesize\ttfamily omnetpp\+::c\+Message $\ast$ T\+T\+P\+Adapter\+::finish\+Session\+Key\+Exchange (\begin{DoxyParamCaption}\item[{omnetpp\+::c\+Message $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Finishes the session key exchange phase, forwarding the final state to the Smart Meter. 
+
+Definition at line 53 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::c1, S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::c2, S\+M\+Imp\+::\+Trusted\+Party\+::confirm\+Session(), S\+M\+Imp\+::\+Packet\+::dest, S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::hmac, S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::id, S\+M\+Imp\+::\+Key\+::partial, S\+M\+Imp\+::\+Key\+::piece, S\+M\+Imp\+::\+Packet\+::pl, S\+M\+Imp\+::\+Trusted\+Party\+::recieve\+H\+M\+A\+C(), and S\+M\+Imp\+::\+H\+M\+A\+C\+Payload\+::time\+Stamp.
+
+\mbox{\Hypertarget{classTTPAdapter_ab69604de63c3f769a10ec33168611274}\label{classTTPAdapter_ab69604de63c3f769a10ec33168611274}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!process\+Data\+From\+SM@{process\+Data\+From\+SM}}
+\index{process\+Data\+From\+SM@{process\+Data\+From\+SM}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{process\+Data\+From\+S\+M()}{processDataFromSM()}}
+{\footnotesize\ttfamily void T\+T\+P\+Adapter\+::process\+Data\+From\+SM (\begin{DoxyParamCaption}\item[{omnetpp\+::c\+Message $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Processes energy consumption data from Smart Meter. 
+
+Definition at line 130 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References Adapter\+::out, Adapter\+::print(), S\+M\+Imp\+::\+Trusted\+Party\+::recieve\+Data(), and Adapter\+::verbose.
+
+\mbox{\Hypertarget{classTTPAdapter_a4eba454018be25436474c37ae1bbe083}\label{classTTPAdapter_a4eba454018be25436474c37ae1bbe083}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!register\+At\+UC@{register\+At\+UC}}
+\index{register\+At\+UC@{register\+At\+UC}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{register\+At\+U\+C()}{registerAtUC()}}
+{\footnotesize\ttfamily omnetpp\+::c\+Message $\ast$ T\+T\+P\+Adapter\+::register\+At\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Registers Trusted Thrid Party with Utility Company. 
+
+Definition at line 104 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References S\+M\+Imp\+::\+Requester\+::get\+Id(), and smart3p\+::\+S\+M\+Packet\+::set\+Id().
+
+\mbox{\Hypertarget{classTTPAdapter_a9aa8948a5224e2cf567eaacb2dcee6ab}\label{classTTPAdapter_a9aa8948a5224e2cf567eaacb2dcee6ab}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!register\+Info\+From\+UC@{register\+Info\+From\+UC}}
+\index{register\+Info\+From\+UC@{register\+Info\+From\+UC}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{register\+Info\+From\+U\+C()}{registerInfoFromUC()}}
+{\footnotesize\ttfamily void T\+T\+P\+Adapter\+::register\+Info\+From\+UC (\begin{DoxyParamCaption}\item[{omnetpp\+::c\+Message $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Registers info recievd from Utility Company regarding key generation. 
+
+Definition at line 115 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References S\+M\+Imp\+::\+Requester\+::generate\+Keys(), S\+M\+Imp\+::\+Master\+Key\+::p, and S\+M\+Imp\+::\+Payload\+::params.
+
+\mbox{\Hypertarget{classTTPAdapter_ad53a31939a278d3c114f79bea64f81f0}\label{classTTPAdapter_ad53a31939a278d3c114f79bea64f81f0}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!register\+SM@{register\+SM}}
+\index{register\+SM@{register\+SM}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{register\+S\+M()}{registerSM()}}
+{\footnotesize\ttfamily void T\+T\+P\+Adapter\+::register\+SM (\begin{DoxyParamCaption}\item[{omnetpp\+::c\+Message $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Registers Smart Meter with Trusted Thrid Party 
+
+Definition at line 98 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References smart3p\+::\+S\+M\+Packet\+::get\+Id(), and S\+M\+Imp\+::\+Trusted\+Party\+::register\+S\+M().
+
+\mbox{\Hypertarget{classTTPAdapter_a1e5405c3ac74693b2a542dd72ad44012}\label{classTTPAdapter_a1e5405c3ac74693b2a542dd72ad44012}} 
+\index{T\+T\+P\+Adapter@{T\+T\+P\+Adapter}!start\+Session\+Key\+Exchange@{start\+Session\+Key\+Exchange}}
+\index{start\+Session\+Key\+Exchange@{start\+Session\+Key\+Exchange}!T\+T\+P\+Adapter@{T\+T\+P\+Adapter}}
+\subsubsection{\texorpdfstring{start\+Session\+Key\+Exchange()}{startSessionKeyExchange()}}
+{\footnotesize\ttfamily omnetpp\+::c\+Queue $\ast$ T\+T\+P\+Adapter\+::start\+Session\+Key\+Exchange (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Begins the session key exchange phase. \begin{DoxyReturn}{Returns}
+Queue of outgoing packets 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file T\+T\+P\+Adapter.\+cc.
+
+
+
+References List$<$ T $>$\+::get(), S\+M\+Imp\+::\+Requester\+::get\+Id(), S\+M\+Imp\+::\+Requester\+::get\+Public\+Mu(), S\+M\+Imp\+::\+Requester\+::get\+Public\+Partial(), S\+M\+Imp\+::\+Trusted\+Party\+::get\+S\+M\+Iterator(), Iterator$<$ T $>$\+::has\+Next(), Iterator$<$ T $>$\+::next(), and smart3p\+::\+S\+M\+Packet\+::set\+Id().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{TTPAdapter_8h}{T\+T\+P\+Adapter.\+h}\item 
+src/\hyperlink{TTPAdapter_8cc}{T\+T\+P\+Adapter.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classsmart3p_1_1SmartMeter}{}\section{smart3p\+:\+:Smart\+Meter Class Reference}
+\label{classsmart3p_1_1SmartMeter}\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+
+
+Simulation Smart Meter class.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Meter.\+h$>$}
+
+Inheritance diagram for smart3p\+:\+:Smart\+Meter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmart3p_1_1SmartMeter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsmart3p_1_1SmartMeter_ac65e2f27b0a9d2545000baac6e1e574d}{log} (simsignal\+\_\+t id, double value)
+\item 
+void \hyperlink{classsmart3p_1_1SmartMeter_af92e8b7e3eaf5d1ec6e3c3f5082e8c14}{log} (char $\ast$tag, double value)
+\item 
+void \hyperlink{classsmart3p_1_1SmartMeter_a3b18ccd6e38a60e4e96d7e6d5b971dbe}{add\+Sim\+Time} (double t)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classsmart3p_1_1SmartMeter_a289d547f41c3f011e99bc0eaf5bd945b}{initialize} ()
+\begin{DoxyCompactList}\small\item\em Initilizer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsmart3p_1_1SmartMeter_a3491294618643d423e8fd3578eb3a439}{timed\+Handle\+Message} (c\+Message $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Message Handler. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsmart3p_1_1SmartMeter_a315ed406035dff5decd3e0f739893f0b}{finish} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Simulation Smart Meter class. 
+
+Definition at line 15 of file Smart\+Meter.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_a3b18ccd6e38a60e4e96d7e6d5b971dbe}\label{classsmart3p_1_1SmartMeter_a3b18ccd6e38a60e4e96d7e6d5b971dbe}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!add\+Sim\+Time@{add\+Sim\+Time}}
+\index{add\+Sim\+Time@{add\+Sim\+Time}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{add\+Sim\+Time()}{addSimTime()}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::add\+Sim\+Time (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+Adds additional time to the simulation based upon the amount of time taken to perform protocol-\/level processing.
+
+Omnet++ treats all computations as taking no time at all in the simulation. So to properly record statistical data we have to add additional time to the simulation. 
+\begin{DoxyParams}{Parameters}
+{\em t} & Time to add to the simulation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Smart\+Meter.\+cc.
+
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_a315ed406035dff5decd3e0f739893f0b}\label{classsmart3p_1_1SmartMeter_a315ed406035dff5decd3e0f739893f0b}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!finish@{finish}}
+\index{finish@{finish}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deconstructor. 
+
+
+
+Definition at line 192 of file Smart\+Meter.\+cc.
+
+
+
+References S\+M\+Adapter\+::end\+Of\+Session\+Key\+Exchange(), smart3p\+::\+S\+M\+Packet\+::get\+Id(), S\+M\+Adapter\+::register\+Info\+From\+U\+C(), S\+M\+Adapter\+::send\+Energy\+Consumption(), smart3p\+::\+S\+M\+Packet\+::set\+Extra\+Info(), smart3p\+::\+S\+M\+Packet\+::set\+Id(), S\+M\+Adapter\+::start\+Session\+Key\+Exchange(), and smart3p\+::\+Unit\+::timeout\+Event.
+
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_a289d547f41c3f011e99bc0eaf5bd945b}\label{classsmart3p_1_1SmartMeter_a289d547f41c3f011e99bc0eaf5bd945b}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!initialize@{initialize}}
+\index{initialize@{initialize}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initilizer. 
+
+
+
+Definition at line 16 of file Smart\+Meter.\+cc.
+
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_ac65e2f27b0a9d2545000baac6e1e574d}\label{classsmart3p_1_1SmartMeter_ac65e2f27b0a9d2545000baac6e1e574d}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!log@{log}}
+\index{log@{log}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::log (\begin{DoxyParamCaption}\item[{simsignal\+\_\+t}]{id,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Emits statistical data to be registered by the simulation. 
+\begin{DoxyParams}{Parameters}
+{\em id} & simsignal\+\_\+t id of the data collection to put value into. \\
+\hline
+{\em value} & The value to add to the data collection identified by id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsmart3p_1_1SmartMeter_af92e8b7e3eaf5d1ec6e3c3f5082e8c14}{log(char$\ast$ tag, double value)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 46 of file Smart\+Meter.\+cc.
+
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_af92e8b7e3eaf5d1ec6e3c3f5082e8c14}\label{classsmart3p_1_1SmartMeter_af92e8b7e3eaf5d1ec6e3c3f5082e8c14}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!log@{log}}
+\index{log@{log}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::log (\begin{DoxyParamCaption}\item[{char $\ast$}]{tag,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Emits statistical data to be registered by the simulation. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & The c-\/string which corresponds to the id of the data collection to add data to. \\
+\hline
+{\em value} & The value to add to the data collection identified by tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsmart3p_1_1SmartMeter_ac65e2f27b0a9d2545000baac6e1e574d}{log(simsignal\+\_\+t id, double value)} 
+\end{DoxySeeAlso}
+
+
+Definition at line 51 of file Smart\+Meter.\+cc.
+
+
+
+References log(), smart3p\+::\+Unit\+::timeout\+Event, and smart3p\+::\+Unit\+::wait\+For\+Delivery.
+
+\mbox{\Hypertarget{classsmart3p_1_1SmartMeter_a3491294618643d423e8fd3578eb3a439}\label{classsmart3p_1_1SmartMeter_a3491294618643d423e8fd3578eb3a439}} 
+\index{smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}!timed\+Handle\+Message@{timed\+Handle\+Message}}
+\index{timed\+Handle\+Message@{timed\+Handle\+Message}!smart3p\+::\+Smart\+Meter@{smart3p\+::\+Smart\+Meter}}
+\subsubsection{\texorpdfstring{timed\+Handle\+Message()}{timedHandleMessage()}}
+{\footnotesize\ttfamily void smart3p\+::\+Smart\+Meter\+::timed\+Handle\+Message (\begin{DoxyParamCaption}\item[{c\+Message $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Message Handler. 
+
+
+
+Reimplemented from \hyperlink{classsmart3p_1_1Unit_a93f16f43dec69d23d8588f3b60c96d69}{smart3p\+::\+Unit}.
+
+
+
+Definition at line 108 of file Smart\+Meter.\+cc.
+
+
+
+References smart3p\+::\+Unit\+::timeout\+Event.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SmartMeter_8h}{Smart\+Meter.\+h}\item 
+src/\hyperlink{SmartMeter_8cc}{Smart\+Meter.\+cc}\end{DoxyCompactItemize}

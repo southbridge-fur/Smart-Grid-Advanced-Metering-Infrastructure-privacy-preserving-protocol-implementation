@@ -1,0 +1,92 @@
+\hypertarget{classsmart3p_1_1DataGenerator}{}\section{smart3p\+:\+:Data\+Generator Class Reference}
+\label{classsmart3p_1_1DataGenerator}\index{smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}}
+
+
+Generates data for \hyperlink{classsmart3p_1_1SmartMeter}{smart3p\+::\+Smart\+Meter}.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Generator.\+h$>$}
+
+Inheritance diagram for smart3p\+:\+:Data\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart3p_1_1DataGenerator}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classsmart3p_1_1DataGenerator_a0a4e7108a50c24c2485645d314892581}{initialize} ()
+\begin{DoxyCompactList}\small\item\em Class initilization. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsmart3p_1_1DataGenerator_a5a26a1e77fc192ce9024e9fad5b16a38}{handle\+Message} (c\+Message $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Main message handler. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classsmart3p_1_1DataGenerator_a30cad918b7a471eeec37508e7d4a9c07}{finish} ()
+\begin{DoxyCompactList}\small\item\em Called when simulation is shut down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generates data for \hyperlink{classsmart3p_1_1SmartMeter}{smart3p\+::\+Smart\+Meter}. 
+
+Definition at line 14 of file Data\+Generator.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmart3p_1_1DataGenerator_a30cad918b7a471eeec37508e7d4a9c07}\label{classsmart3p_1_1DataGenerator_a30cad918b7a471eeec37508e7d4a9c07}} 
+\index{smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}!finish@{finish}}
+\index{finish@{finish}!smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}}
+\subsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily void smart3p\+::\+Data\+Generator\+::finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when simulation is shut down. 
+
+
+
+Definition at line 214 of file Data\+Generator.\+cc.
+
+\mbox{\Hypertarget{classsmart3p_1_1DataGenerator_a5a26a1e77fc192ce9024e9fad5b16a38}\label{classsmart3p_1_1DataGenerator_a5a26a1e77fc192ce9024e9fad5b16a38}} 
+\index{smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}!handle\+Message@{handle\+Message}}
+\index{handle\+Message@{handle\+Message}!smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}}
+\subsubsection{\texorpdfstring{handle\+Message()}{handleMessage()}}
+{\footnotesize\ttfamily void smart3p\+::\+Data\+Generator\+::handle\+Message (\begin{DoxyParamCaption}\item[{c\+Message $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Main message handler. 
+
+
+
+Definition at line 151 of file Data\+Generator.\+cc.
+
+
+
+References smart3p\+::\+S\+M\+Packet\+::get\+Id(), and smart3p\+::\+S\+M\+Packet\+::set\+Id().
+
+\mbox{\Hypertarget{classsmart3p_1_1DataGenerator_a0a4e7108a50c24c2485645d314892581}\label{classsmart3p_1_1DataGenerator_a0a4e7108a50c24c2485645d314892581}} 
+\index{smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}!initialize@{initialize}}
+\index{initialize@{initialize}!smart3p\+::\+Data\+Generator@{smart3p\+::\+Data\+Generator}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void smart3p\+::\+Data\+Generator\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Class initilization. 
+
+
+
+Definition at line 15 of file Data\+Generator.\+cc.
+
+
+
+References smart3p\+::\+S\+M\+Packet\+::set\+Value().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{DataGenerator_8h}{Data\+Generator.\+h}\item 
+src/\hyperlink{DataGenerator_8cc}{Data\+Generator.\+cc}\end{DoxyCompactItemize}

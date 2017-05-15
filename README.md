@@ -20,6 +20,7 @@ Available [here](https://www.researchgate.net/publication/305077004_Secure_and_e
 # **Implementation**
 
 Doxygen comments have been added to all the source files.
+
 Compile via `$ doxygen doxygen.config`
 
 Currently looking into an external host to publish the documentation on. May possibly utilize Github's wiki functionality.
