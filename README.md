@@ -1,12 +1,12 @@
-#**Authors**
+# **Authors**
 
 Vitaly Ford, Ambareen Siraj, Mohammad Ashiqur Rahman
 	
-#**Abstract**
+# **Abstract**
 
 The Advanced Metering Infrastructure (AMI) plays a critical role in the Smart Grid. In regarding the usage of smart meters in AMI, there is a primary concern about how utility companies manage energy consumption data, particularly with respect to consumer privacy. This research presents a novel protocol for secure and efficient communication of energy consumption data, protecting its confidentiality, integrity, and privacy while utilizing the existing Grid infrastructure. The protocol supports time-of-use billing and data mining for advanced fine-grained data analysis. We report on the empirical results of the theoretical, experimental, and comparative analyses of the proposed protocol.
 
-#**Published**
+# **Published**
 
 
 [Journal of Computer and System Sciences](http://www.sciencedirect.com/science/article/pii/S0022000016300472)
@@ -17,7 +17,7 @@ Available [here](https://www.researchgate.net/publication/305077004_Secure_and_e
 
 *Protocol implementation by Daniel Tyler*
 
-#**Implementation**
+# **Implementation**
 
 Doxygen comments have been added to all the source files.
 Compile via `$ doxygen doxygen.config`
