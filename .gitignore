@@ -1,3 +1,9 @@
 /**/*~
+/**/#*#
 /**/Smart3P
 /**/*unused
+/simulations/results
+/update.sh
+/doxygen*
+!/doxygen.config
+	
