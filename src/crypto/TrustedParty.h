@@ -111,7 +111,7 @@ public:
       \param r shared-secret used for message verification.
       \return Returns true if session key passed verification, false otherwise.
      */
-    bool recieveHMAC(Integer length, Integer c1, Integer c2, Integer id, Key smKey, Integer r);
+    bool recieveHMAC(Integer length, Integer c1, Integer c2, Integer smId, Key smKey, Integer r);
 
     /*!
       Recieve, verify and decrypt energy usage data.
