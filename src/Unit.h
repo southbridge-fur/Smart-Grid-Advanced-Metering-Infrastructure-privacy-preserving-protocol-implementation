@@ -62,7 +62,7 @@ class Unit : public cSimpleModule
     /*!
       Main message handler.
       \param msg Input message to be handled.
-      \sa smart3P::SmartMeter::handleMessage(cMessage *msg), smart3P::UtilityCompany::handleMessage(cMessage *msg), smart3P::TrustedThirdParty::handleMessage(cMessage *msg) and smart3P::Collector::handleMessage(cMessage *msg)
+      \sa smart3p::SmartMeter::handleMessage(cMessage *msg), smart3p::UtilityCompany::handleMessage(cMessage *msg), smart3p::TrustedThirdParty::handleMessage(cMessage *msg) and smart3p::Collector::handleMessage(cMessage *msg)
     */
     void handleMessage(cMessage *msg);
 };

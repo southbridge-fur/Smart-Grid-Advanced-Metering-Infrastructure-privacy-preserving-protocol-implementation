@@ -71,7 +71,7 @@ class SmartMeter : public Unit
     SMAdapter* sm;
 
   protected:
-    //! Initilizer
+    //! Initializer
     virtual void initialize();
     //! Message Handler
     virtual void timedHandleMessage(cMessage *msg);
