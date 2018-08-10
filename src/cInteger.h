@@ -16,6 +16,7 @@ private:
       Required by omnetpp::cNamedObject.
      */
     const char* className = "cInteger";
+    
     //! Instance name.
     /*!
       Used to identify a particular instance.
@@ -31,6 +32,7 @@ public:
       \sa cInteger(cInteger*), cInteger(const char*, CryptoPP::Integer*) and cInteger(const char* n, int i)
      */
     cInteger(const char* n);
+    
     //! Constructor
     /*!
       \param n Instance name.
@@ -38,6 +40,7 @@ public:
       \sa cInteger(const char* n), cInteger(cInteger*), and cInteger(const char* n, int i)
      */
     cInteger(const char* n, CryptoPP::Integer* i);
+    
     //! Constructor
     /*!
       \param n Instance name.
@@ -45,12 +48,14 @@ public:
       \sa cInteger(const char* n), cInteger(cInteger*), and cInteger(const char*, CryptoPP::Integer*)
      */
     cInteger(const char* n, int i);
+    
     //! Constructor
     /*!
       Copy constructor.
       \sa cInteger(const char* n), cInteger(const char*, CryptoPP::Integer*) and cInteger(const char* n, int i)
     */
     cInteger(cInteger* i);
+    
     //! Destructor
     virtual ~cInteger();
 
@@ -59,11 +64,13 @@ public:
       \sa className
     */
     const char* getClassName() const;
+    
     /*!
       \return Returns instance name.
       \sa setName(const char*).
      */
     const char* getName() const;
+    
     /*!
       Sets the name of the instance.
       \param c const char string to change the name to.

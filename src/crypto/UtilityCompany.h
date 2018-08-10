@@ -82,12 +82,14 @@ public:
       \return If found, returns the local Smart Meter representation. Returns NULL otherwise.
     */
     List<Integer>* getSMbyAnonId(Integer id);
+	
     /*!
       Gets Smart Meter representation by a given ID.
       \param id The ID to search for.
       \return If found, returns the local Smart Meter representation. Returns NULL otherwise.
     */
     List<Integer>* getSM(Integer id);
+    
     /*!
       Gets Trusted Third Party representation by a given ID.
       \param id The ID to search for.
@@ -101,6 +103,7 @@ public:
       \param data Data to add to the local Smart Meter representation.
     */
     void addSMData(Integer* id, Integer* data);
+
     /*!
       Adds arbitrary data to the local Trusted Third Party representation.
       \param id ID of the Trusted Third Party to add data to.

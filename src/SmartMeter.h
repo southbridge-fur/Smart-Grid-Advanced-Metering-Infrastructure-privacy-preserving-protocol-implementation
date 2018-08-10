@@ -22,52 +22,86 @@ class SmartMeter : public Unit
     */
     simtime_t curDelay;
 
-    /*! Simulation time of the last successful outgoing message */
+    /*! 
+      Simulation time of the last successful outgoing message 
+    */
     simtime_t lastArrival;
 
     long int smID;
 
-    /*! Energy data output queue */
+    /*! 
+      Energy data output queue 
+    */
     cQueue *energyDataQueue;
 
-    /*! Internal message to start sending more energy consumption data. 
-     \sa sendEnergyConsumption(cMessage *msg) */
+    /*! 
+      Internal message to start sending more energy consumption data.
+      \sa sendEnergyConsumption(cMessage *msg) 
+    */
     cMessage *startSendingEnergyData;
     
     // statistics
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*!
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     simsignal_t stackSizeSignal;
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*!
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     simsignal_t sessionKeyDecryptionTimeSignal;
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*! 
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     simsignal_t sessionKeyEncryptionTimeSignal;
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*! 
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     simsignal_t dataEncryptionTimeSignal;
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*! 
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     cDoubleHistogram iaTimeHistogram;
-    /*! \sa log(simsignal_t id, double value) and log(char* tag, double value)*/
+    /*! 
+      \sa log(simsignal_t id, double value) and log(char* tag, double value)
+    */
     cOutVector arrivalsVector;
 
     // functionality
     //! Initilization
-    /*! Initilizes all the variables and signals for logging */
+    /*! 
+      Initilizes all the variables and signals for logging 
+    */
     void smartMeterInit(cMessage *msg);
 
-    /*! Registers the smart3p::SmartMeter with smart3p::UtilityCompany. */
+    /*! 
+      Registers the smart3p::SmartMeter with smart3p::UtilityCompany. 
+    */
     void registerAtUC();
-    /*! Registers the key data from smart3p::UtilityCompany. */
+    /*! 
+      Registers the key data from smart3p::UtilityCompany. 
+    */
     void registerInfoFromUC(cMessage *msg);
-    /*! Recieves the data from TTP and sends the new session key back. */
+    /*! 
+      Recieves the data from TTP and sends the new session key back. 
+    */
     void startSessionKeyExchange(cMessage *msg);
-    /*! Finishes session key registration and verification. */
+    /*! 
+      Finishes session key registration and verification. 
+    */
     void endOfSessionKeyExchange(cMessage *msg);
-    /*! Puts the next message onto the energyDataQueue. */
+    /*! 
+      Puts the next message onto the energyDataQueue. 
+    */
     void sendEnergyConsumption(cMessage *msg);
-    /*! Encapsulates energy data and sends it to smart3p::Collector */    
+    /*! 
+      Encapsulates energy data and sends it to smart3p::Collector 
+    */
     void sendQueueDataToCollector();
 
     //! adapter
-    /*! Pointer to the adapter. */
+    /*!
+      Pointer to the adapter. 
+    */
     SMAdapter* sm;
 
   protected:
